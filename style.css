@@ -4,7 +4,6 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-
     background: #ffeef8;
 }
 
@@ -27,7 +26,7 @@ body {
 }
 
 
-/* LEFT CLOTHING AREA */
+/* LEFT MENU */
 
 #left-menu {
     position: relative;
@@ -47,7 +46,7 @@ body {
 }
 
 
-/* RIGHT CLOTHING AREA */
+/* RIGHT MENU */
 
 #right-menu {
     position: relative;
@@ -89,7 +88,9 @@ body {
 }
 
 
-/* SHIRT POSITIONS */
+/* TOP CLOTHING POSITIONS */
+
+/* Row 1 */
 
 #shirt1 {
     left: 15px;
@@ -101,28 +102,34 @@ body {
     top: 30px;
 }
 
+
+/* Row 2 */
+
 #shirt3 {
     left: 15px;
-    top: 170px;
+    top: 160px;
 }
 
 #shirt4 {
     left: 105px;
-    top: 170px;
+    top: 160px;
 }
+
+
+/* Row 3 */
 
 #shirt5 {
     left: 15px;
-    top: 310px;
+    top: 290px;
 }
 
 #shirt6 {
     left: 105px;
-    top: 310px;
+    top: 290px;
 }
 
 
-/* WHILE DRAGGING */
+/* DRAGGING */
 
 .clothing-item:active {
     cursor: grabbing;
