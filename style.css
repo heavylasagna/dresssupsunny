@@ -4,18 +4,66 @@ body {
 }
 
 #game {
-    position: relative;
-    width: 800px;
-    height: 700px;
+    width: 1200px;
+    height: 800px;
     margin: 30px auto;
+    display: flex;
     background: white;
-    overflow: hidden;
+}
+
+/* LEFT MENU */
+
+#left-menu {
+    width: 250px;
+    height: 100%;
+}
+
+.top-category {
+    height: 400px;
+    padding: 15px;
+}
+
+.category h2 {
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+/* CLOTHING ITEMS */
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.clothing-item {
+    width: 118px;
+    height: auto;
+    cursor: grab;
+}
+
+
+/* CHARACTER AREA */
+
+#character-area {
+    position: relative;
+    width: 700px;
+    height: 100%;
 }
 
 #character {
     position: absolute;
     width: 250px;
     height: auto;
-    left: 275px;
+    left: 225px;
     top: 50px;
+}
+
+
+/* RIGHT MENU */
+
+#right-menu {
+    width: 250px;
+    height: 100%;
 }
