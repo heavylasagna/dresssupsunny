@@ -88,48 +88,6 @@ document.addEventListener("mouseup", function() {
 
 });
 
-});
-
-
-/* Move clothing */
-
-document.addEventListener("mousemove", function(event) {
-
-    if (activeItem === null) {
-        return;
-    }
-
-    const game = document.getElementById("game");
-
-    const gameRect = game.getBoundingClientRect();
-
-
-    activeItem.style.left =
-        (event.clientX - gameRect.left - offsetX) + "px";
-
-    activeItem.style.top =
-        (event.clientY - gameRect.top - offsetY) + "px";
-
-
-    /* Move the clothing item out of its menu */
-
-    if (activeItem.parentElement !== game) {
-
-        game.appendChild(activeItem);
-
-    }
-
-});
-
-
-/* Stop dragging */
-
-document.addEventListener("mouseup", function() {
-
-    activeItem = null;
-
-});
-
 
 /* =========================
    THEME SWITCH
@@ -247,6 +205,11 @@ document.addEventListener("contextmenu", function(event) {
     }
 
 });
+
+
+/* =========================
+   GAME SCALING
+   ========================= */
 
 function scaleGame() {
 
