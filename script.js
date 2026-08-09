@@ -1,105 +1,107 @@
-let draggedItem = null;
-let highestLayer = 1;
+let activeItem = null;
+
+let offsetX = 0;
+let offsetY = 0;
+
+let highestLayer = 10;
+
+
+/* FIND ALL CLOTHING */
 
 const clothingItems = document.querySelectorAll(".clothing-item");
-const characterArea = document.getElementById("character-area");
 
 
-// Drag an item from the menu
+/* START DRAGGING */
+
 clothingItems.forEach(function(item) {
-
-    item.addEventListener("dragstart", function() {
-        draggedItem = item;
-    });
-
-});
-
-
-// Allow dropping inside the character area
-characterArea.addEventListener("dragover", function(event) {
-    event.preventDefault();
-});
-
-
-// Create a new movable clothing item
-characterArea.addEventListener("drop", function(event) {
-
-    event.preventDefault();
-
-    if (!draggedItem) return;
-
-    const newItem = document.createElement("img");
-
-    newItem.src = draggedItem.src;
-    newItem.classList.add("placed-item");
-
-    const areaRect = characterArea.getBoundingClientRect();
-
-    newItem.style.left =
-        (event.clientX - areaRect.left - draggedItem.width / 2) + "px";
-
-    newItem.style.top =
-        (event.clientY - areaRect.top - draggedItem.height / 2) + "px";
-
-    highestLayer++;
-    newItem.style.zIndex = highestLayer;
-
-    characterArea.appendChild(newItem);
-
-    makeMovable(newItem);
-
-    draggedItem = null;
-});
-
-
-// Make a placed item freely movable
-function makeMovable(item) {
-
-    let moving = false;
-    let offsetX = 0;
-    let offsetY = 0;
-
 
     item.addEventListener("mousedown", function(event) {
 
-        moving = true;
+        event.preventDefault();
 
-        const rect = item.getBoundingClientRect();
+        activeItem = item;
+
+
+        /* BRING ITEM TO FRONT */
+
+        highestLayer++;
+
+        activeItem.style.zIndex = highestLayer;
+
+
+        /* FIND ITEM'S CURRENT POSITION */
+
+        const rect = activeItem.getBoundingClientRect();
 
         offsetX = event.clientX - rect.left;
         offsetY = event.clientY - rect.top;
 
-        // Bring this item to the very front
-        highestLayer++;
-        item.style.zIndex = highestLayer;
-
-        event.preventDefault();
     });
 
-
-    document.addEventListener("mousemove", function(event) {
-
-        if (!moving) return;
-
-        const areaRect = characterArea.getBoundingClientRect();
-
-        item.style.left =
-            (event.clientX - areaRect.left - offsetX) + "px";
-
-        item.style.top =
-            (event.clientY - areaRect.top - offsetY) + "px";
-    });
+});
 
 
-    document.addEventListener("mouseup", function() {
+/* MOVE ITEM */
 
-        moving = false;
+document.addEventListener("mousemove", function(event) {
 
-    });
-}
+    if (activeItem === null) {
+        return;
+    }
 
 
-// Disable right-click menu
+    const gameRect = document
+        .getElementById("game")
+        .getBoundingClientRect();
+
+
+    /* NEW POSITION */
+
+    const newLeft =
+        event.clientX
+        - gameRect.left
+        - offsetX;
+
+
+    const newTop =
+        event.clientY
+        - gameRect.top
+        - offsetY;
+
+
+    activeItem.style.left = newLeft + "px";
+    activeItem.style.top = newTop + "px";
+
+
+    /*
+        Since the item is positioned relative to #left-menu,
+        we need to move it into the game coordinate system.
+    */
+
+    if (activeItem.parentElement !== document.getElementById("game")) {
+
+        document
+            .getElementById("game")
+            .appendChild(activeItem);
+
+    }
+
+});
+
+
+/* STOP DRAGGING */
+
+document.addEventListener("mouseup", function() {
+
+    activeItem = null;
+
+});
+
+
+/* DISABLE RIGHT CLICK */
+
 document.addEventListener("contextmenu", function(event) {
+
     event.preventDefault();
+
 });
