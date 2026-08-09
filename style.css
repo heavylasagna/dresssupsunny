@@ -37,19 +37,19 @@ body {
     top: 12px;
     right: 12px;
 
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 32px;
 
     padding: 0;
 
-    border: none;
-    border-radius: 50%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 
-    background: rgba(255, 255, 255, 0.85);
+    background: #ffffff;
     color: #555;
 
-    font-size: 22px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 30px;
     text-align: center;
 
     cursor: pointer;
@@ -58,17 +58,15 @@ body {
 
     box-sizing: border-box;
 
-    /* Prevent the button from affecting the flex layout */
-    flex: none;
+    outline: none;
 }
 
 #theme-button:hover {
-    background: white;
-    transform: scale(1.05);
+    background: #f5f5f5;
 }
 
 #theme-button:active {
-    transform: scale(0.95);
+    background: #eeeeee;
 }
 
 /* =========================
@@ -285,4 +283,3 @@ body {
 .clothing-item:active {
     cursor: grabbing;
 }
-```
