@@ -6,12 +6,11 @@ let offsetY = 0;
 let highestLayer = 10;
 
 
-/* FIND ALL CLOTHING */
+/* =========================
+   CLOTHING DRAGGING
+   ========================= */
 
 const clothingItems = document.querySelectorAll(".clothing-item");
-
-
-/* START DRAGGING */
 
 clothingItems.forEach(function(item) {
 
@@ -21,15 +20,14 @@ clothingItems.forEach(function(item) {
 
         activeItem = item;
 
-
-        /* BRING ITEM TO FRONT */
+        /* Bring clicked item to the front */
 
         highestLayer++;
 
         activeItem.style.zIndex = highestLayer;
 
 
-        /* FIND ITEM'S CURRENT POSITION */
+        /* Remember where we grabbed it */
 
         const rect = activeItem.getBoundingClientRect();
 
@@ -41,7 +39,7 @@ clothingItems.forEach(function(item) {
 });
 
 
-/* MOVE ITEM */
+/* Move clothing */
 
 document.addEventListener("mousemove", function(event) {
 
@@ -49,47 +47,30 @@ document.addEventListener("mousemove", function(event) {
         return;
     }
 
+    const game = document.getElementById("game");
 
-    const gameRect = document
-        .getElementById("game")
-        .getBoundingClientRect();
-
-
-    /* NEW POSITION */
-
-    const newLeft =
-        event.clientX
-        - gameRect.left
-        - offsetX;
+    const gameRect = game.getBoundingClientRect();
 
 
-    const newTop =
-        event.clientY
-        - gameRect.top
-        - offsetY;
+    activeItem.style.left =
+        (event.clientX - gameRect.left - offsetX) + "px";
+
+    activeItem.style.top =
+        (event.clientY - gameRect.top - offsetY) + "px";
 
 
-    activeItem.style.left = newLeft + "px";
-    activeItem.style.top = newTop + "px";
+    /* Move the clothing item out of its menu */
 
+    if (activeItem.parentElement !== game) {
 
-    /*
-        Since the item is positioned relative to #left-menu,
-        we need to move it into the game coordinate system.
-    */
-
-    if (activeItem.parentElement !== document.getElementById("game")) {
-
-        document
-            .getElementById("game")
-            .appendChild(activeItem);
+        game.appendChild(activeItem);
 
     }
 
 });
 
 
-/* STOP DRAGGING */
+/* Stop dragging */
 
 document.addEventListener("mouseup", function() {
 
@@ -98,7 +79,53 @@ document.addEventListener("mouseup", function() {
 });
 
 
-/* DISABLE RIGHT CLICK */
+/* =========================
+   THEME SWITCH
+   ========================= */
+
+const themeButton = document.getElementById("theme-button");
+
+let darkMode = false;
+
+themeButton.addEventListener("click", function() {
+
+    const game = document.getElementById("game");
+
+
+    if (darkMode === false) {
+
+        /* DARK THEME */
+
+        game.style.backgroundImage =
+            'url("assets/фон 2.png")';
+
+        document.body.style.backgroundColor = "#050505";
+
+        themeButton.textContent = "☀";
+
+        darkMode = true;
+
+    } else {
+
+        /* LIGHT THEME */
+
+        game.style.backgroundImage =
+            'url("assets/фон 1.png")';
+
+        document.body.style.backgroundColor = "#ffeef8";
+
+        themeButton.textContent = "☾";
+
+        darkMode = false;
+
+    }
+
+});
+
+
+/* =========================
+   DISABLE RIGHT CLICK
+   ========================= */
 
 document.addEventListener("contextmenu", function(event) {
 
