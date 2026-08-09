@@ -26,14 +26,67 @@ clothingItems.forEach(function(item) {
         activeItem.style.zIndex = highestLayer;
 
 
-        /* Remember where we grabbed it */
+        /* Get the current game scale */
+
+        const game = document.getElementById("game");
+
+        const gameRect = game.getBoundingClientRect();
+
+        const scale = gameRect.width / 1400;
+
+
+        /* Remember exactly where we grabbed it */
 
         const rect = activeItem.getBoundingClientRect();
 
-        offsetX = event.clientX - rect.left;
-        offsetY = event.clientY - rect.top;
+        offsetX = (event.clientX - rect.left) / scale;
+        offsetY = (event.clientY - rect.top) / scale;
 
     });
+
+});
+
+
+/* Move clothing */
+
+document.addEventListener("mousemove", function(event) {
+
+    if (activeItem === null) {
+        return;
+    }
+
+    const game = document.getElementById("game");
+
+    const gameRect = game.getBoundingClientRect();
+
+    const scale = gameRect.width / 1400;
+
+
+    activeItem.style.left =
+        ((event.clientX - gameRect.left) / scale - offsetX) + "px";
+
+    activeItem.style.top =
+        ((event.clientY - gameRect.top) / scale - offsetY) + "px";
+
+
+    /* Move the clothing item out of its menu */
+
+    if (activeItem.parentElement !== game) {
+
+        game.appendChild(activeItem);
+
+    }
+
+});
+
+
+/* Stop dragging */
+
+document.addEventListener("mouseup", function() {
+
+    activeItem = null;
+
+});
 
 });
 
