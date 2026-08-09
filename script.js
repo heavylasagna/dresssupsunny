@@ -127,8 +127,57 @@ themeButton.addEventListener("click", function() {
    DISABLE RIGHT CLICK
    ========================= */
 
-document.addEventListener("contextmenu", function(event) {
+/*
+    Disable the browser's right-click menu
+    specifically on the entire game.
+*/
+
+const game = document.getElementById("game");
+
+game.addEventListener("contextmenu", function(event) {
 
     event.preventDefault();
+
+    return false;
+
+});
+
+
+/*
+    Also disable it on every element currently
+    inside the game.
+*/
+
+const gameElements = game.querySelectorAll("*");
+
+gameElements.forEach(function(element) {
+
+    element.addEventListener("contextmenu", function(event) {
+
+        event.preventDefault();
+
+        event.stopPropagation();
+
+        return false;
+
+    });
+
+});
+
+
+/*
+    Keep it disabled if clothing elements are
+    moved around by JavaScript.
+*/
+
+document.addEventListener("contextmenu", function(event) {
+
+    if (event.target.closest("#game")) {
+
+        event.preventDefault();
+
+        return false;
+
+    }
 
 });
