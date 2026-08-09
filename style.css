@@ -1,11 +1,16 @@
-```css
 html,
 body {
     margin: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #ffeef8;
+    background: #b3afcc;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* =========================
@@ -18,13 +23,15 @@ body {
     width: 1400px;
     height: 800px;
 
-    margin: 0 auto;
+    flex-shrink: 0;
 
     display: flex;
 
     background: white;
 
     overflow: hidden;
+
+    transform-origin: center center;
 }
 
 /* =========================
@@ -42,11 +49,11 @@ body {
 
     padding: 0;
 
-    border: 1px solid #ccc;
+    border: 1px solid #b3afcc;
     border-radius: 6px;
 
     background: #ffffff;
-    color: #555;
+    color: #555555;
 
     font-size: 16px;
     line-height: 30px;
