@@ -15,6 +15,7 @@ body {
 #character {
     position: absolute;
     width: 250px;
-    left: 350px;
+    height: 350px;
+    left: 275px;
     top: 50px;
 }
