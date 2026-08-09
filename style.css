@@ -1,4 +1,20 @@
 body {
-    background: pink;
-    text-align: center;
+    margin: 0;
+    background: #ffeef8;
+}
+
+#game {
+    position: relative;
+    width: 800px;
+    height: 700px;
+    margin: 30px auto;
+    background: white;
+    overflow: hidden;
+}
+
+#character {
+    position: absolute;
+    width: 400px;
+    left: 200px;
+    top: 50px;
 }
