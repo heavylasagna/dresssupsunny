@@ -112,7 +112,7 @@ themeButton.addEventListener("click", function() {
         game.style.backgroundImage =
             'url("assets/фон 1.png")';
 
-        document.body.style.backgroundColor = "#ffeef8";
+        document.body.style.backgroundColor = "#b3afcc";
 
         themeButton.textContent = "☾";
 
