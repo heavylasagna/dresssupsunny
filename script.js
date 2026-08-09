@@ -194,3 +194,20 @@ document.addEventListener("contextmenu", function(event) {
     }
 
 });
+
+function scaleGame() {
+
+    const game = document.getElementById("game");
+
+    const scaleX = window.innerWidth / 1400;
+    const scaleY = window.innerHeight / 800;
+
+    const scale = Math.min(scaleX, scaleY, 1);
+
+    game.style.transform = "scale(" + scale + ")";
+
+}
+
+scaleGame();
+
+window.addEventListener("resize", scaleGame);
