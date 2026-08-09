@@ -1,10 +1,10 @@
+```javascript
 let activeItem = null;
 
 let offsetX = 0;
 let offsetY = 0;
 
 let highestLayer = 10;
-
 
 /* =========================
    CLOTHING DRAGGING
@@ -85,12 +85,28 @@ document.addEventListener("mouseup", function() {
 
 const themeButton = document.getElementById("theme-button");
 
+const game = document.getElementById("game");
+
 let darkMode = false;
 
+
+/* =========================
+   START WITH LIGHT THEME
+   ========================= */
+
+game.style.backgroundImage =
+    'url("assets/фон 1.png")';
+
+document.body.style.backgroundColor = "#b3afcc";
+
+themeButton.textContent = "☾";
+
+
+/* =========================
+   THEME BUTTON
+   ========================= */
+
 themeButton.addEventListener("click", function() {
-
-    const game = document.getElementById("game");
-
 
     if (darkMode === false) {
 
@@ -128,11 +144,9 @@ themeButton.addEventListener("click", function() {
    ========================= */
 
 /*
-    Disable the browser's right-click menu
-    specifically on the entire game.
+Disable the browser's right-click menu
+specifically on the entire game.
 */
-
-const game = document.getElementById("game");
 
 game.addEventListener("contextmenu", function(event) {
 
@@ -144,8 +158,8 @@ game.addEventListener("contextmenu", function(event) {
 
 
 /*
-    Also disable it on every element currently
-    inside the game.
+Also disable it on every element currently
+inside the game.
 */
 
 const gameElements = game.querySelectorAll("*");
@@ -166,8 +180,8 @@ gameElements.forEach(function(element) {
 
 
 /*
-    Keep it disabled if clothing elements are
-    moved around by JavaScript.
+Keep it disabled if clothing elements are
+moved around by JavaScript.
 */
 
 document.addEventListener("contextmenu", function(event) {
@@ -181,3 +195,4 @@ document.addEventListener("contextmenu", function(event) {
     }
 
 });
+```
