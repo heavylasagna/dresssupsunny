@@ -65,4 +65,5 @@ html, body {
     width: 118px;
     height: auto;
     cursor: grab;
+    user-select: none;
 }
