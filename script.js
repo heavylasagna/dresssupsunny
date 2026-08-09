@@ -1,4 +1,3 @@
-```javascript
 let activeItem = null;
 
 let offsetX = 0;
@@ -85,14 +84,14 @@ document.addEventListener("mouseup", function() {
 
 const themeButton = document.getElementById("theme-button");
 
-const game = document.getElementById("game");
-
 let darkMode = false;
 
 
 /* =========================
    START WITH LIGHT THEME
    ========================= */
+
+const game = document.getElementById("game");
 
 game.style.backgroundImage =
     'url("assets/фон 1.png")';
@@ -195,4 +194,3 @@ document.addEventListener("contextmenu", function(event) {
     }
 
 });
-```
