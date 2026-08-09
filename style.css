@@ -15,8 +15,8 @@ body {
 #game {
     position: relative;
 
-    width: 1200px;
-    height: 700px;
+    width: 1400px;
+    height: 800px;
 
     margin: 0 auto;
 
@@ -35,8 +35,8 @@ body {
 #left-menu {
     position: relative;
 
-    width: 250px;
-    height: 700px;
+    width: 300px;
+    height: 800px;
 }
 
 
@@ -47,8 +47,8 @@ body {
 #character-area {
     position: relative;
 
-    width: 700px;
-    height: 700px;
+    width: 800px;
+    height: 800px;
 }
 
 
@@ -59,8 +59,8 @@ body {
 #right-menu {
     position: relative;
 
-    width: 250px;
-    height: 700px;
+    width: 300px;
+    height: 800px;
 }
 
 
@@ -74,7 +74,7 @@ body {
     width: 250px;
     height: auto;
 
-    left: 225px;
+    left: 275px;
     top: 100px;
 
     user-select: none;
@@ -90,7 +90,6 @@ body {
     position: absolute;
 
     cursor: grab;
-
     user-select: none;
 
     z-index: 10;
@@ -101,21 +100,12 @@ body {
    TOPS
    ========================= */
 
-
-/* Type 1
-   Original: 118 × 107
-   Scaled:   134 × 122
-*/
-
 #shirt1,
 #shirt2,
 #shirt3 {
     width: 134px;
     height: 122px;
 }
-
-
-/* Type 1 row */
 
 #shirt1 {
     left: 5px;
@@ -133,20 +123,12 @@ body {
 }
 
 
-/* Type 2
-   Original: 144 × 132
-   Scaled:   164 × 150
-*/
-
 #shirt4,
 #shirt5,
 #shirt6 {
     width: 164px;
     height: 150px;
 }
-
-
-/* Type 2 row */
 
 #shirt4 {
     left: 5px;
@@ -168,21 +150,12 @@ body {
    BOTTOMS
    ========================= */
 
-
-/* Type 1
-   Original: 80 × 52
-   Scaled:   91 × 59
-*/
-
 #shorts1,
 #shorts2,
 #shorts3 {
     width: 91px;
     height: 59px;
 }
-
-
-/* Type 1 row */
 
 #shorts1 {
     left: 10px;
@@ -200,20 +173,12 @@ body {
 }
 
 
-/* Type 2
-   Original: 82 × 79
-   Scaled:   93 × 90
-*/
-
 #shorts4,
 #shorts5,
 #shorts6 {
     width: 93px;
     height: 90px;
 }
-
-
-/* Type 2 row */
 
 #shorts4 {
     left: 10px;
@@ -235,21 +200,12 @@ body {
    SOCKS
    ========================= */
 
-
-/* Type 1
-   Original: 78 × 36
-   Scaled:   89 × 41
-*/
-
 #socks1,
 #socks2,
 #socks3 {
     width: 89px;
     height: 41px;
 }
-
-
-/* Type 1 row */
 
 #socks1 {
     left: 10px;
@@ -267,20 +223,12 @@ body {
 }
 
 
-/* Type 2
-   Original: 78 × 60
-   Scaled:   89 × 68
-*/
-
 #socks4,
 #socks5,
 #socks6 {
     width: 89px;
     height: 68px;
 }
-
-
-/* Type 2 row */
 
 #socks4 {
     left: 10px;
