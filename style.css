@@ -287,7 +287,7 @@ body {
 #socks8,
 #socks9 {
     width: 98px;
-    height: 129px;
+    height: auto;
 }
 
 #socks7 {
