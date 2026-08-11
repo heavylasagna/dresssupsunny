@@ -341,85 +341,86 @@ body {
 
 /* =========================
    CHARMS
+   Original sizes — no scaling
    ========================= */
 
-/* CHARM 1 - 9px + 16px = 25px */
+/* CHARM 1 - 9x10 */
 
 #charm1,
 #charm1-mirrored {
-    width: 25px;
+    width: 9px;
     height: auto;
 }
 
-/* CHARM 2 - 10px + 16px = 26px */
+/* CHARM 2 - 10x9 */
 
 #charm2,
 #charm2-mirrored {
-    width: 26px;
+    width: 10px;
     height: auto;
 }
 
-/* CHARM 3 - 14px + 16px = 30px */
+/* CHARM 3 - 14x9 */
 
 #charm3,
 #charm3-mirrored {
-    width: 30px;
+    width: 14px;
     height: auto;
 }
 
-/* CHARM 4 - 13px + 16px = 29px */
+/* CHARM 4 - 13x10 */
 
 #charm4,
 #charm4-mirrored {
-    width: 29px;
+    width: 13px;
     height: auto;
 }
 
-/* CHARM 5 - 12px + 16px = 28px */
+/* CHARM 5 - 12x9 */
 
 #charm5,
 #charm5-mirrored {
-    width: 28px;
+    width: 12px;
     height: auto;
 }
 
-/* CHARM 6 - 10px + 16px = 26px */
+/* CHARM 6 - 10x10 */
 
 #charm6,
 #charm6-mirrored {
-    width: 26px;
+    width: 10px;
     height: auto;
 }
 
-/* CHARM 7 - 15px + 16px = 31px */
+/* CHARM 7 - 15x13 */
 
 #charm7,
 #charm7-mirrored {
-    width: 31px;
+    width: 15px;
     height: auto;
 }
 
-/* CHARM 8 - 12px + 16px = 28px */
+/* CHARM 8 - 12x12 */
 
 #charm8,
 #charm8-mirrored {
-    width: 28px;
+    width: 12px;
     height: auto;
 }
 
-/* CHARM 9 - 12px + 16px = 28px */
+/* CHARM 9 - 12x12 */
 
 #charm9,
 #charm9-mirrored {
-    width: 28px;
+    width: 12px;
     height: auto;
 }
 
-/* CHARM 10 - 11px + 16px = 27px */
+/* CHARM 10 - 11x13 */
 
 #charm10,
 #charm10-mirrored {
-    width: 27px;
+    width: 11px;
     height: auto;
 }
 
@@ -436,47 +437,47 @@ body {
 }
 
 #charm1-mirrored {
-    left: 40px;
+    left: 30px;
     top: 380px;
 }
 
 #charm2 {
-    left: 70px;
+    left: 60px;
     top: 380px;
 }
 
 #charm2-mirrored {
-    left: 100px;
+    left: 80px;
     top: 380px;
 }
 
 #charm3 {
-    left: 130px;
+    left: 110px;
     top: 380px;
 }
 
 #charm3-mirrored {
-    left: 165px;
+    left: 140px;
     top: 380px;
 }
 
 #charm4 {
-    left: 200px;
+    left: 170px;
     top: 380px;
 }
 
 #charm4-mirrored {
-    left: 235px;
+    left: 195px;
     top: 380px;
 }
 
 #charm5 {
-    left: 270px;
+    left: 225px;
     top: 380px;
 }
 
 #charm5-mirrored {
-    left: 300px;
+    left: 250px;
     top: 380px;
 }
 
@@ -489,48 +490,48 @@ body {
 }
 
 #charm6-mirrored {
-    left: 40px;
+    left: 30px;
     top: 430px;
 }
 
 #charm7 {
-    left: 70px;
+    left: 60px;
     top: 430px;
 }
 
 #charm7-mirrored {
-    left: 110px;
+    left: 90px;
     top: 430px;
 }
 
 #charm8 {
-    left: 145px;
+    left: 125px;
     top: 430px;
 }
 
 #charm8-mirrored {
-    left: 180px;
+    left: 150px;
     top: 430px;
 }
 
 #charm9 {
-    left: 215px;
+    left: 180px;
     top: 430px;
 }
 
 #charm9-mirrored {
-    left: 250px;
+    left: 205px;
     top: 430px;
 }
 
 #charm10 {
-    left: 10px;
-    top: 480px;
+    left: 235px;
+    top: 430px;
 }
 
 #charm10-mirrored {
-    left: 45px;
-    top: 480px;
+    left: 260px;
+    top: 430px;
 }
 
 
