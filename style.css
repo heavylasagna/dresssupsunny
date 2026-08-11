@@ -289,8 +289,6 @@ body {
 
 /* =========================
    SOCKS 7-9
-   Original: 78px wide
-   +16px = 94px
    ========================= */
 
 #socks7,
@@ -317,8 +315,6 @@ body {
 
 /* =========================
    SHOES
-   Original: 80px wide
-   +16px = 96px
    ========================= */
 
 #shoes1,
@@ -342,6 +338,210 @@ body {
     left: 150px;
     top: 330px;
 }
+
+/* =========================
+   CHARMS
+   ========================= */
+
+/* CHARM 1 - 9px + 16px = 25px */
+
+#charm1,
+#charm1-mirrored {
+    width: 25px;
+    height: auto;
+}
+
+/* CHARM 2 - 10px + 16px = 26px */
+
+#charm2,
+#charm2-mirrored {
+    width: 26px;
+    height: auto;
+}
+
+/* CHARM 3 - 14px + 16px = 30px */
+
+#charm3,
+#charm3-mirrored {
+    width: 30px;
+    height: auto;
+}
+
+/* CHARM 4 - 13px + 16px = 29px */
+
+#charm4,
+#charm4-mirrored {
+    width: 29px;
+    height: auto;
+}
+
+/* CHARM 5 - 12px + 16px = 28px */
+
+#charm5,
+#charm5-mirrored {
+    width: 28px;
+    height: auto;
+}
+
+/* CHARM 6 - 10px + 16px = 26px */
+
+#charm6,
+#charm6-mirrored {
+    width: 26px;
+    height: auto;
+}
+
+/* CHARM 7 - 15px + 16px = 31px */
+
+#charm7,
+#charm7-mirrored {
+    width: 31px;
+    height: auto;
+}
+
+/* CHARM 8 - 12px + 16px = 28px */
+
+#charm8,
+#charm8-mirrored {
+    width: 28px;
+    height: auto;
+}
+
+/* CHARM 9 - 12px + 16px = 28px */
+
+#charm9,
+#charm9-mirrored {
+    width: 28px;
+    height: auto;
+}
+
+/* CHARM 10 - 11px + 16px = 27px */
+
+#charm10,
+#charm10-mirrored {
+    width: 27px;
+    height: auto;
+}
+
+
+/* =========================
+   CHARM POSITIONS
+   ========================= */
+
+/* Row 1 */
+
+#charm1 {
+    left: 10px;
+    top: 380px;
+}
+
+#charm1-mirrored {
+    left: 40px;
+    top: 380px;
+}
+
+#charm2 {
+    left: 70px;
+    top: 380px;
+}
+
+#charm2-mirrored {
+    left: 100px;
+    top: 380px;
+}
+
+#charm3 {
+    left: 130px;
+    top: 380px;
+}
+
+#charm3-mirrored {
+    left: 165px;
+    top: 380px;
+}
+
+#charm4 {
+    left: 200px;
+    top: 380px;
+}
+
+#charm4-mirrored {
+    left: 235px;
+    top: 380px;
+}
+
+#charm5 {
+    left: 270px;
+    top: 380px;
+}
+
+#charm5-mirrored {
+    left: 300px;
+    top: 380px;
+}
+
+
+/* Row 2 */
+
+#charm6 {
+    left: 10px;
+    top: 430px;
+}
+
+#charm6-mirrored {
+    left: 40px;
+    top: 430px;
+}
+
+#charm7 {
+    left: 70px;
+    top: 430px;
+}
+
+#charm7-mirrored {
+    left: 110px;
+    top: 430px;
+}
+
+#charm8 {
+    left: 145px;
+    top: 430px;
+}
+
+#charm8-mirrored {
+    left: 180px;
+    top: 430px;
+}
+
+#charm9 {
+    left: 215px;
+    top: 430px;
+}
+
+#charm9-mirrored {
+    left: 250px;
+    top: 430px;
+}
+
+#charm10 {
+    left: 10px;
+    top: 480px;
+}
+
+#charm10-mirrored {
+    left: 45px;
+    top: 480px;
+}
+
+
+/* =========================
+   MIRRORED CHARMS
+   ========================= */
+
+.charm-mirrored {
+    transform: scaleX(-1);
+}
+
 
 /* =========================
    DRAGGING
