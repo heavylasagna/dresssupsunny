@@ -1,241 +1,348 @@
-<!DOCTYPE html>
-<html lang="en">
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #b3afcc;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    <title>Dress Up Game</title>
+/* =========================
+   MAIN GAME
+   ========================= */
 
-    <link rel="stylesheet" href="style.css">
-</head>
+#game {
+    position: relative;
 
-<body>
+    width: 1400px;
+    height: 800px;
 
-    <!-- GAME CANVAS -->
-    <div id="game">
+    flex-shrink: 0;
 
-        <!-- THEME SWITCH BUTTON -->
-        <button id="theme-button" type="button">☾</button>
+    display: flex;
 
+    background: white;
 
-        <!-- =========================
-             LEFT SIDE
-             ========================= -->
+    overflow: hidden;
 
-        <div id="left-menu">
+    transform-origin: center center;
+}
 
-            <!-- TOPS -->
+/* =========================
+   THEME SWITCH BUTTON
+   ========================= */
 
-            <img
-                src="assets/футболка 1.png"
-                class="clothing-item"
-                id="shirt1"
-                draggable="false"
-            >
+#theme-button {
+    position: absolute;
 
-            <img
-                src="assets/футболка 2.png"
-                class="clothing-item"
-                id="shirt2"
-                draggable="false"
-            >
+    top: 12px;
+    right: 12px;
 
-            <img
-                src="assets/футболка 3.png"
-                class="clothing-item"
-                id="shirt3"
-                draggable="false"
-            >
+    width: 70px;
+    height: 32px;
 
-            <img
-                src="assets/футболка 4.png"
-                class="clothing-item"
-                id="shirt4"
-                draggable="false"
-            >
+    padding: 0;
 
-            <img
-                src="assets/футболка 5.png"
-                class="clothing-item"
-                id="shirt5"
-                draggable="false"
-            >
+    border: 1px solid #b3afcc;
+    border-radius: 6px;
 
-            <img
-                src="assets/футболка 6.png"
-                class="clothing-item"
-                id="shirt6"
-                draggable="false"
-            >
+    background: #ffffff;
+    color: #555555;
 
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
 
-            <!-- BOTTOMS -->
+    cursor: pointer;
 
-            <img
-                src="assets/шорты 1.png"
-                class="clothing-item"
-                id="shorts1"
-                draggable="false"
-            >
+    z-index: 100;
 
-            <img
-                src="assets/шорты 2.png"
-                class="clothing-item"
-                id="shorts2"
-                draggable="false"
-            >
+    box-sizing: border-box;
 
-            <img
-                src="assets/шорты 3.png"
-                class="clothing-item"
-                id="shorts3"
-                draggable="false"
-            >
+    outline: none;
+}
 
-            <img
-                src="assets/шорты 4.png"
-                class="clothing-item"
-                id="shorts4"
-                draggable="false"
-            >
+#theme-button:hover {
+    background: #f5f5f5;
+}
 
-            <img
-                src="assets/шорты 5.png"
-                class="clothing-item"
-                id="shorts5"
-                draggable="false"
-            >
+#theme-button:active {
+    background: #eeeeee;
+}
 
-            <img
-                src="assets/шорты 6.png"
-                class="clothing-item"
-                id="shorts6"
-                draggable="false"
-            >
+/* =========================
+   LEFT MENU
+   ========================= */
 
-        </div>
+#left-menu {
+    position: relative;
 
+    width: 300px;
+    height: 800px;
+}
 
-        <!-- =========================
-             CHARACTER AREA
-             ========================= -->
+/* =========================
+   CHARACTER AREA
+   ========================= */
 
-        <div id="character-area">
+#character-area {
+    position: relative;
 
-            <img
-                src="assets/фигура.png"
-                id="character"
-                draggable="false"
-            >
+    width: 800px;
+    height: 800px;
+}
 
-        </div>
+/* =========================
+   RIGHT MENU
+   ========================= */
 
+#right-menu {
+    position: relative;
 
-        <!-- =========================
-             RIGHT SIDE
-             ========================= -->
+    width: 300px;
+    height: 800px;
+}
 
-        <div id="right-menu">
+/* =========================
+   CHARACTER
+   ========================= */
 
-            <!-- SOCKS -->
+#character {
+    position: absolute;
 
-            <img
-                src="assets/носки 1.png"
-                class="clothing-item"
-                id="socks1"
-                draggable="false"
-            >
+    width: 250px;
+    height: auto;
 
-            <img
-                src="assets/носки 2.png"
-                class="clothing-item"
-                id="socks2"
-                draggable="false"
-            >
+    left: 275px;
+    top: 100px;
 
-            <img
-                src="assets/носки 3.png"
-                class="clothing-item"
-                id="socks3"
-                draggable="false"
-            >
+    user-select: none;
+    pointer-events: none;
+}
 
-            <img
-                src="assets/носки 4.png"
-                class="clothing-item"
-                id="socks4"
-                draggable="false"
-            >
+/* =========================
+   ALL CLOTHING
+   ========================= */
 
-            <img
-                src="assets/носки 5.png"
-                class="clothing-item"
-                id="socks5"
-                draggable="false"
-            >
+.clothing-item {
+    position: absolute;
 
-            <img
-                src="assets/носки 6.png"
-                class="clothing-item"
-                id="socks6"
-                draggable="false"
-            >
+    cursor: grab;
+    user-select: none;
 
-            <!-- SOCKS 7-9 -->
+    z-index: 10;
+}
 
-            <img
-                src="assets/носки 7.png"
-                class="clothing-item"
-                id="socks7"
-                draggable="false"
-            >
+/* =========================
+   TOPS
+   ========================= */
 
-            <img
-                src="assets/носки 8.png"
-                class="clothing-item"
-                id="socks8"
-                draggable="false"
-            >
+#shirt1,
+#shirt2,
+#shirt3 {
+    width: 134px;
+    height: 122px;
+}
 
-            <img
-                src="assets/носки 9.png"
-                class="clothing-item"
-                id="socks9"
-                draggable="false"
-            >
+#shirt1 {
+    left: 5px;
+    top: 30px;
+}
 
-            <!-- SHOES -->
+#shirt2 {
+    left: 70px;
+    top: 30px;
+}
 
-            <img
-                src="assets/обувь 1.png"
-                class="clothing-item"
-                id="shoes1"
-                draggable="false"
-            >
+#shirt3 {
+    left: 135px;
+    top: 30px;
+}
 
-            <img
-                src="assets/обувь 2.png"
-                class="clothing-item"
-                id="shoes2"
-                draggable="false"
-            >
+#shirt4,
+#shirt5,
+#shirt6 {
+    width: 164px;
+    height: 150px;
+}
 
-            <img
-                src="assets/обувь 3.png"
-                class="clothing-item"
-                id="shoes3"
-                draggable="false"
-            >
+#shirt4 {
+    left: 5px;
+    top: 180px;
+}
 
-        </div>
+#shirt5 {
+    left: 70px;
+    top: 180px;
+}
 
-    </div>
+#shirt6 {
+    left: 135px;
+    top: 180px;
+}
 
+/* =========================
+   BOTTOMS
+   ========================= */
 
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
+#shorts1,
+#shorts2,
+#shorts3 {
+    width: 91px;
+    height: 59px;
+}
 
-</body>
+#shorts1 {
+    left: 10px;
+    top: 350px;
+}
 
-</html>
+#shorts2 {
+    left: 80px;
+    top: 350px;
+}
+
+#shorts3 {
+    left: 150px;
+    top: 350px;
+}
+
+#shorts4,
+#shorts5,
+#shorts6 {
+    width: 93px;
+    height: 90px;
+}
+
+#shorts4 {
+    left: 10px;
+    top: 420px;
+}
+
+#shorts5 {
+    left: 80px;
+    top: 420px;
+}
+
+#shorts6 {
+    left: 150px;
+    top: 420px;
+}
+
+/* =========================
+   SOCKS 1-3
+   ========================= */
+
+#socks1,
+#socks2,
+#socks3 {
+    width: 89px;
+    height: 41px;
+}
+
+#socks1 {
+    left: 10px;
+    top: 30px;
+}
+
+#socks2 {
+    left: 80px;
+    top: 30px;
+}
+
+#socks3 {
+    left: 150px;
+    top: 30px;
+}
+
+/* =========================
+   SOCKS 4-6
+   ========================= */
+
+#socks4,
+#socks5,
+#socks6 {
+    width: 89px;
+    height: 68px;
+}
+
+#socks4 {
+    left: 10px;
+    top: 100px;
+}
+
+#socks5 {
+    left: 80px;
+    top: 100px;
+}
+
+#socks6 {
+    left: 150px;
+    top: 100px;
+}
+
+/* =========================
+   SOCKS 7-9
+   ========================= */
+
+#socks7,
+#socks8,
+#socks9 {
+    width: 128px;
+    height: 129px;
+}
+
+#socks7 {
+    left: 10px;
+    top: 180px;
+}
+
+#socks8 {
+    left: 80px;
+    top: 180px;
+}
+
+#socks9 {
+    left: 150px;
+    top: 180px;
+}
+
+/* =========================
+   SHOES
+   ========================= */
+
+#shoes1,
+#shoes2,
+#shoes3 {
+    width: 100px;
+    height: 33px;
+}
+
+#shoes1 {
+    left: 10px;
+    top: 310px;
+}
+
+#shoes2 {
+    left: 80px;
+    top: 310px;
+}
+
+#shoes3 {
+    left: 150px;
+    top: 310px;
+}
+
+/* =========================
+   DRAGGING
+   ========================= */
+
+.clothing-item:active {
+    cursor: grabbing;
+}
