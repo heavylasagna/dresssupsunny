@@ -284,6 +284,32 @@ body {
 }
 
 /* =========================
+   SOCKS 7-9
+   ========================= */
+
+#socks7,
+#socks8,
+#socks9 {
+    width: 78px;
+    height: 109px;
+}
+
+#socks7 {
+    left: 10px;
+    top: 180px;
+}
+
+#socks8 {
+    left: 80px;
+    top: 180px;
+}
+
+#socks9 {
+    left: 150px;
+    top: 180px;
+}
+
+/* =========================
    DRAGGING
    ========================= */
 
