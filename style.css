@@ -147,7 +147,7 @@ body {
 #shirt2,
 #shirt3 {
     width: 134px;
-    height: 122px;
+    height: auto;
 }
 
 #shirt1 {
@@ -169,7 +169,7 @@ body {
 #shirt5,
 #shirt6 {
     width: 164px;
-    height: 150px;
+    height: auto;
 }
 
 #shirt4 {
@@ -195,7 +195,7 @@ body {
 #shorts2,
 #shorts3 {
     width: 91px;
-    height: 59px;
+    height: auto;
 }
 
 #shorts1 {
@@ -217,7 +217,7 @@ body {
 #shorts5,
 #shorts6 {
     width: 93px;
-    height: 90px;
+    height: auto;
 }
 
 #shorts4 {
@@ -243,7 +243,7 @@ body {
 #socks2,
 #socks3 {
     width: 89px;
-    height: 41px;
+    height: auto;
 }
 
 #socks1 {
@@ -269,7 +269,7 @@ body {
 #socks5,
 #socks6 {
     width: 89px;
-    height: 68px;
+    height: auto;
 }
 
 #socks4 {
@@ -295,7 +295,7 @@ body {
 #socks8,
 #socks9 {
     width: 128px;
-    height: 129px;
+    height: auto;
 }
 
 #socks7 {
@@ -321,7 +321,7 @@ body {
 #shoes2,
 #shoes3 {
     width: 100px;
-    height: 33px;
+    height: auto;
 }
 
 #shoes1 {
