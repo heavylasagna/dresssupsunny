@@ -264,6 +264,36 @@ body {
 }
 
 /* =========================
+   TURTLENECKS
+   Original: 136px
+   +16px = 152px
+   ========================= */
+
+#turtleneck1,
+#turtleneck2,
+#turtleneck3 {
+    width: 152px;
+    height: auto;
+}
+
+/* placed together with the hoodies */
+
+#turtleneck1 {
+    left: 5px;
+    top: 650px;
+}
+
+#turtleneck2 {
+    left: 70px;
+    top: 650px;
+}
+
+#turtleneck3 {
+    left: 135px;
+    top: 650px;
+}
+
+/* =========================
    SCARVES
    Original: 76px
    +16px = 92px
@@ -278,17 +308,17 @@ body {
 
 #scarf1 {
     left: 10px;
-    top: 690px;
+    top: 750px;
 }
 
 #scarf2 {
     left: 105px;
-    top: 690px;
+    top: 750px;
 }
 
 #scarf3 {
     left: 200px;
-    top: 690px;
+    top: 750px;
 }
 
 /* =========================
