@@ -289,12 +289,14 @@ body {
 
 /* =========================
    SOCKS 7-9
+   Original: 78px wide
+   +16px = 94px
    ========================= */
 
 #socks7,
 #socks8,
 #socks9 {
-    width: 98px;
+    width: 94px;
     height: auto;
 }
 
@@ -315,12 +317,14 @@ body {
 
 /* =========================
    SHOES
+   Original: 80px wide
+   +16px = 96px
    ========================= */
 
 #shoes1,
 #shoes2,
 #shoes3 {
-    width: 100px;
+    width: 96px;
     height: auto;
 }
 
