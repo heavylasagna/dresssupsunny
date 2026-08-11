@@ -294,7 +294,7 @@ body {
 #socks7,
 #socks8,
 #socks9 {
-    width: 128px;
+    width: 98px;
     height: auto;
 }
 
@@ -326,17 +326,17 @@ body {
 
 #shoes1 {
     left: 10px;
-    top: 310px;
+    top: 330px;
 }
 
 #shoes2 {
     left: 80px;
-    top: 310px;
+    top: 330px;
 }
 
 #shoes3 {
     left: 150px;
-    top: 310px;
+    top: 330px;
 }
 
 /* =========================
