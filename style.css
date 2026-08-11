@@ -305,17 +305,17 @@ body {
 }
 
 #turtleneck1 {
-    left: 145px;
-    top: 530px;
-}
-
-#turtleneck2 {
     left: 175px;
     top: 530px;
 }
 
-#turtleneck3 {
+#turtleneck2 {
     left: 205px;
+    top: 530px;
+}
+
+#turtleneck3 {
+    left: 235px;
     top: 530px;
 }
 
