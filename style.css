@@ -188,7 +188,7 @@ body {
 }
 
 /* =========================
-   BOTTOMS
+   SHORTS
    ========================= */
 
 #shorts1,
@@ -236,6 +236,34 @@ body {
 }
 
 /* =========================
+   PANTS
+   Original: 84px
+   +16px = 100px
+   ========================= */
+
+#pants1,
+#pants2,
+#pants3 {
+    width: 100px;
+    height: auto;
+}
+
+#pants1 {
+    left: 195px;
+    top: 350px;
+}
+
+#pants2 {
+    left: 220px;
+    top: 350px;
+}
+
+#pants3 {
+    left: 245px;
+    top: 350px;
+}
+
+/* =========================
    HOODIES
    Original: 150px
    +16px = 166px
@@ -275,9 +303,6 @@ body {
     width: 152px;
     height: auto;
 }
-
-/* Positioned to the right of the hoodies
-   with significant overlap */
 
 #turtleneck1 {
     left: 145px;
